@@ -1,4 +1,4 @@
-resource "tfe_organization" "test"{
-  name  = "TFE-provider-playground"
-  email = "yingying@hashicorp.com"
+resource "tfe_team" "test" {
+  name         = "test team"
+  organization = "TFE-provider-playground"
 }
