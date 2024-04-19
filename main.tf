@@ -1,4 +1,4 @@
-resource "tfe_organization" "a-module-producer"{
-  name  = "TFE-provider-configured-org-YY"
+resource "tfe_organization" "test"{
+  name  = "TFE-provider-playground"
   email = "yingying@hashicorp.com"
 }
