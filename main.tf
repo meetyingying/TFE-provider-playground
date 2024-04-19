@@ -1,6 +1,4 @@
-provider "tfe" {
-  token = "8qTxC1y4K2Qzzw.atlasv1.P8chi283ycIYiKaiWkELlXiRSebXTaiOyRfdddgYVmpXyrQAYd21P2uIxrg2AOSS3gU"
-}
+provider "tfe" {}
 
 resource "tfe_team" "example_team" {
   name         = "example-team"
