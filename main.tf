@@ -1,9 +1,4 @@
-# Pre-requisites: configure sensitive environmental variables
-provider "tfe" {
-  version  = "~> 0.53.0"
-}
-
-resource "tfe_organization" {
+resource "tfe_organization" "a-module-producer"{
   name  = "TFE-provider-configured-org-YY"
   email = "yingying@hashicorp.com"
 }
