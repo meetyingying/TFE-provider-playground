@@ -3,7 +3,7 @@ provider "tfe" {}
 
 resource "tfe_team" "example_tf_team" {
   name         = "example-tf-team"
-  organization = "TFE-provider-playground"
+  organization = "YingYing-sandbox"
 }
 
 // Configure HCP provider
