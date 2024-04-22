@@ -1,10 +1,10 @@
 // Configure TFE provider
 provider "tfe" {}
 
-resource "tfe_team" "example_tf_team" {
-  name         = "example-tf-team"
-  organization = "TFE-provider-playground"
-}
+# resource "tfe_team" "example_tf_team" {
+#   name         = "example-tf-team"
+#   organization = "TFE-provider-playground"
+# }
 
 // Configure HCP provider
 provider "hcp" {}
