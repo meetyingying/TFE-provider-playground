@@ -7,9 +7,7 @@ resource "tfe_team" "provider_tf_team" {
 }
 
 // Configure HCP provider
-provider "hcp" {
-  host = "portal.hcp.to"
-}
+provider "hcp" {}
 
 resource "hcp_group" "provider_hcp_team" {
   display_name = "provider-hcp-group"
