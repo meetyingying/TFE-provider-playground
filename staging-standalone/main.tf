@@ -1,5 +1,7 @@
 // Configure TFE provider
-provider "tfe" {}
+provider "tfe" {
+  hostname = "app.staging.terraform.io"
+}
 
 resource "tfe_team" "provider_tf_team" {
   name         = "provider-tf-team"
