@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    hostname = "app.terraform.io"
+    hostname = "app.staging.terraform.io"
     organization = "YingYing-sandbox"
 
     workspaces {
