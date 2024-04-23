@@ -19,7 +19,7 @@ resource "hcp_service_principal" "provider_service_principal_2" {
   parent = hcp_project.provider_hcp_project.resource_name
 }
 
-# add users for reference
+# list users for reference
 data "hcp_user_principal" "yingying_1" {
   email = "yingying+1@hashicorp.com"
 }
