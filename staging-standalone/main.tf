@@ -8,6 +8,16 @@ resource "tfe_team" "provider_tf_team" {
   organization = "YingYing-sandbox"
 }
 
+resource "tfe_team_member" "andre" {
+  team_id  = provider_tf_team.test.id
+  username = "andre_pereira_hcp"
+}
+
+resource "tfe_organization" "provider_tf_organization" {
+  name  = "provider-tf-organization"
+  email = "yingying@hashicorp.com"
+}
+
 // Configure HCP provider
 provider "hcp" {}
 
