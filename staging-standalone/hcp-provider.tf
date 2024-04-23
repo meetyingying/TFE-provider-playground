@@ -3,6 +3,9 @@ provider "hcp" {
   project_id = "4fe900f2-2b94-42fe-8ebb-8b0410d39840"
 }
 
+data "hcp_organization" "yingying_org" {
+}
+
 # create a new group
 resource "hcp_group" "provider_hcp_group" {
   display_name = "provider-hcp-group"
@@ -18,14 +21,14 @@ resource "hcp_project" "provider_hcp_project" {
 # create a couple service principals in the project
 resource "hcp_service_principal" "provider_service_principal_1" {
   name = "provider-service-principal-1"
-  parent = hcp_project.provider_hcp_project.resource_name
+  parent = data.hcp_organization.yingying_org.resource_name
 }
 resource "hcp_service_principal" "provider_service_principal_2" {
   name = "provider-service-principal-2"
-  parent = hcp_project.provider_hcp_project.resource_name
+  parent = data.hcp_organization.yingying_org.resource_name
 }
 
-# add members to the group
+# add the service principals to the group
 resource "hcp_group_members" "provider_hcp_group_members" {
   group = hcp_group.provider_hcp_group.resource_name
   members = [
