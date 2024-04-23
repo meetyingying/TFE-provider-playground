@@ -3,6 +3,7 @@ provider "hcp" {
   project_id = "4fe900f2-2b94-42fe-8ebb-8b0410d39840"
 }
 
+# add the organization for reference
 data "hcp_organization" "yingying_org" {
 }
 
