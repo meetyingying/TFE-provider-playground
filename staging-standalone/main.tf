@@ -9,7 +9,7 @@ resource "tfe_team" "provider_tf_team" {
 }
 
 resource "tfe_team_member" "andre" {
-  team_id  = provider_tf_team.test.id
+  team_id  = tfe_team.provider_tf_team.test.id
   username = "andre_pereira_hcp"
 }
 
