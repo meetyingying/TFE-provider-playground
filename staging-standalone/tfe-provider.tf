@@ -4,11 +4,6 @@ provider "tfe" {
 }
 
 # create an organization
-resource "tfe_organization" "tfe_provider_org_yy" {
-  name  = "tfe-provider-org-yy"
-  email = "yingying@hashicorp.com"
-}
-
 resource "tfe_organization" "provider_tf_organization" {
   name  = "provider-tf-organization"
   email = "yingying@hashicorp.com"
