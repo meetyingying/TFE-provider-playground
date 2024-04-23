@@ -25,6 +25,10 @@ resource "tfe_organization_membership" "maddy" {
 resource "tfe_team" "provider_tf_team" {
   organization = tfe_organization.provider_tf_organization.name
   name         = "provider-tf-team"
+  organization_access {
+    manage_workspaces = true
+    manage_vcs_settings = true
+  }
 }
 
 # add user maddy to the team
