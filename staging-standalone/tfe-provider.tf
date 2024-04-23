@@ -27,6 +27,7 @@ resource "tfe_team" "provider_tf_team" {
   name         = "provider-tf-team"
   organization_access {
     manage_workspaces = true
+    manage_policies = true
     manage_vcs_settings = true
   }
 }
