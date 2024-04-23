@@ -2,7 +2,10 @@
 provider "tfe" {
   hostname = "app.staging.terraform.io"
 }
-
+resource "tfe_organization" "provider_tf_organization" {
+  name  = "provider-tf-organization"
+  email = "yingying@hashicorp.com"
+}
 resource "tfe_team" "provider_tf_team" {
   name         = "provider-tf-team"
   organization = "YingYing-sandbox"
