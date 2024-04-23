@@ -37,7 +37,7 @@ resource "hcp_group" "provider_hcp_group" {
 resource "hcp_group_members" "provider_hcp_group_members" {
   group = hcp_group.provider_hcp_group.resource_name
   members = [
-    hcp_user_principal.yingying_1.user_id,
-    hcp_user_principal.yingying_jan23.user_id,
+    hcp_user_principal.yingying_1.id,
+    hcp_user_principal.yingying_jan23.id,
   ]
 }
