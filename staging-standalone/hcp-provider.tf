@@ -1,5 +1,7 @@
 # configure HCP provider
-provider "hcp" {}
+provider "hcp" {
+  project_id = "4fe900f2-2b94-42fe-8ebb-8b0410d39840"
+}
 
 # create a new group
 resource "hcp_group" "provider_hcp_group" {
