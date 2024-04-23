@@ -32,4 +32,3 @@ resource "tfe_team_organization_member" "maddy" {
   team_id = tfe_team.provider_tf_team.id
   organization_membership_id = tfe_organization_membership.maddy.id
 }
-
