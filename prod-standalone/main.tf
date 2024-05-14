@@ -1,8 +1,8 @@
 // Configure TFE provider
-provider "tfe" {}
+
 
 resource "tfe_team" "provider_tf_team" {
-  name         = "provider-tf-team"
+  name         = "provider-tf-team-updated"
   organization = "YingYing-sandbox"
 }
 
