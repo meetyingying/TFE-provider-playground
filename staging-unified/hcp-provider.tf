@@ -46,3 +46,9 @@ resource "hcp_group_members" "provider_hcp_group_members" {
     data.hcp_user_principal.yingying.user_id,
   ]
 }
+
+resource "hcp_project_iam_binding" "provider_project_sp_1_iam" {
+  project_id   = hcp_project.provider_hcp_project.resource_id
+  principal_id = hcp_service_principal.provider_service_principal_1.resource_id
+  role         = "roles/contributor"
+}
