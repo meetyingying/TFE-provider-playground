@@ -8,7 +8,7 @@ terraform {
     }
   }
 
-required_providers {
+  required_providers {
     tfe = {
       source = "hashicorp/tfe"
       version = "~> 0.53.0"
