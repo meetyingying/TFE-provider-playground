@@ -21,11 +21,14 @@ resource "hcp_service_principal" "provider_service_principal_2" {
 }
 
 # list existing users for reference
-data "hcp_user_principal" "joey_lei" {
+data "hcp_user_principal" "joey" {
   email = "joey.lei@hashicorp.com"
 }
-data "hcp_user_principal" "maddy_hodges" {
+data "hcp_user_principal" "maddy" {
   email = "maddy.hodges@hashicorp.com"
+}
+data "hcp_user_principal" "yingying" {
+  email = "yingying@hashicorp.com"
 }
 
 # create a new group
@@ -38,7 +41,8 @@ resource "hcp_group" "provider_hcp_group" {
 resource "hcp_group_members" "provider_hcp_group_members" {
   group = hcp_group.provider_hcp_group.resource_name
   members = [
-    data.hcp_user_principal.joey_lei.user_id,
-    data.hcp_user_principal.maddy_hodges.user_id,
+    data.hcp_user_principal.joey.user_id,
+    data.hcp_user_principal.maddy.user_id,
+    data.hcp_user_principal.yingying.user_id,
   ]
 }
