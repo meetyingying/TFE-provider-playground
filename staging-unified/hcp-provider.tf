@@ -4,11 +4,6 @@ provider "hcp" {
   project_id = "31b0608f-4755-4b81-a239-ae3fe06570be"
 }
 
-# reference a unified org
-data "hcp_organization" "TFC_Unification_Test_Org_2" {
-  resource_id = 3df4db3b-3c37-483a-a52b-9804a3640115
-}
-
 # create a new project
 resource "hcp_project" "provider_hcp_project" {
   name        = "provider-hcp-project"
