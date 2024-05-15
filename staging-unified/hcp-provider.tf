@@ -11,12 +11,12 @@ resource "hcp_project" "provider_hcp_project" {
 }
 
 # create service principals in the project
-resource "hcp_service_principal" "provider_service_principal_1" {
-  name = "provider-service-principal-1"
+resource "hcp_service_principal" "provider_sp_1" {
+  name = "provider-sp-1"
   parent = hcp_project.provider_hcp_project.resource_name
 }
-resource "hcp_service_principal" "provider_service_principal_2" {
-  name = "provider-service-principal-2"
+resource "hcp_service_principal" "provider_sp_2" {
+  name = "provider-sp-2"
   parent = hcp_project.provider_hcp_project.resource_name
 }
 
@@ -47,8 +47,16 @@ resource "hcp_group_members" "provider_hcp_group_members" {
   ]
 }
 
+# assign provider_sp_1 contributor role to provider_hcp_project
 resource "hcp_project_iam_binding" "provider_project_sp_1_iam" {
   project_id   = hcp_project.provider_hcp_project.resource_id
-  principal_id = hcp_service_principal.provider_service_principal_1.resource_id
+  principal_id = hcp_service_principal.provider_sp_1.resource_id
+  role         = "roles/contributor"
+}
+
+# assign provider_hcp_group contributor role to provider_hcp_project
+resource "hcp_project_iam_binding" "provider_project_group_iam" {
+  project_id   = hcp_project.provider_hcp_project.resource_id
+  principal_id = hcp_group.provider_hcp_group.resource_id
   role         = "roles/contributor"
 }
