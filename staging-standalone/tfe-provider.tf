@@ -37,3 +37,10 @@ resource "tfe_team_organization_member" "maddy" {
   team_id = tfe_team.provider_tf_team.id
   organization_membership_id = tfe_organization_membership.maddy.id
 }
+
+# assign a team admin role to a project
+resource "tfe_team_project_access" "provider_tf_team" {
+  access       = "admin"
+  team_id      = tfe_team.provider_tf_team.id
+  project_id   = tfe_project.provider_tf_project.id
+}
