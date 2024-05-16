@@ -40,10 +40,6 @@ resource "hcp_group" "provider_hcp_group" {
   display_name = "provider-hcp-group"
   description  = "HCP group created with HCP provider"
 }
-resource "hcp_group" "provider_hcp_group_2" {
-  display_name = "provider-hcp-group-2"
-  description  = "Another HCP group created with HCP provider"
-}
 
 # add the users to the group
 resource "hcp_group_members" "provider_hcp_group_members" {

@@ -26,3 +26,10 @@ resource "tfe_team_project_access" "provider_hcp_group_project_access" {
   team_id      = data.tfe_team.provider_hcp_group.id
   project_id   = data.tfe_project.provider_hcp_project.id
 }
+
+# create a workspace in Terraform US
+resource "tfe_workspace" "provider_tf_workspace" {
+  name         = "provider-tf-workspace"
+  organization = data.tfe_organization.TFC_Unification_Test_Org_2.name
+  tag_names    = ["provider", "app"]
+}
