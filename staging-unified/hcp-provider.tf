@@ -4,6 +4,10 @@ provider "hcp" {
   project_id = "31b0608f-4755-4b81-a239-ae3fe06570be"
 }
 
+# reference the HCP org the service principal created in
+data "hcp_organization" "TFC_Unification_Test_Org_2" {
+}
+
 # create a new project
 resource "hcp_project" "provider_hcp_project" {
   name        = "provider-hcp-project"
