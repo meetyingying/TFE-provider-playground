@@ -5,7 +5,7 @@ provider "tfe" {
 
 # reference unified org in TFE provider
 data "tfe_organization" "TFC_Unification_Test_Org_2" {
-  name = data.hcp_organization.TFC_Unification_Test_Org_2
+  name = data.hcp_organization.TFC_Unification_Test_Org_2.name
 }
 
 # reference unified project in TFE provider
