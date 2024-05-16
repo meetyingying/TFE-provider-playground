@@ -16,7 +16,7 @@ data "tfe_project" "provider_hcp_project" {
 
 # reference unified group in TFE provider
 data "tfe_team" "provider_hcp_group" {
-  name = hcp_project.provider_hcp_group.name
+  name = hcp_group.provider_hcp_group.display_name
   organization = data.tfe_organization.TFC_Unification_Test_Org_2.name
 }
 
