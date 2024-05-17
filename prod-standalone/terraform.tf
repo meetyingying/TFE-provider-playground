@@ -1,4 +1,7 @@
 terraform {
+  cloud {
+    hostname = "app.terraform.io"
+  }
 
   required_providers {
     tfe = {
