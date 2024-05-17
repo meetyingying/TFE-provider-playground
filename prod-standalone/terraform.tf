@@ -1,12 +1,4 @@
 terraform {
-  cloud {
-    hostname = "app.terraform.io"
-    organization = "YingYing-sandbox"
-
-    workspaces {
-      name = "TFE-provider-playground"
-    }
-  }
 
   required_providers {
     tfe = {
